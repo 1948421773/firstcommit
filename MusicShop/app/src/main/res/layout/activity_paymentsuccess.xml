@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_code_error"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/back"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="支付成功"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_top"
+        android:background="@color/shoppingcart_unaccount"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/view">
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:id="@+id/ll_success_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/paymentsuccess"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="订单支付成功"
+                android:textColor="@color/prodetail_prod_title"
+                android:textSize="18dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_below="@id/ll_success_info"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="您已成功支付"
+                android:visibility="gone"
+                android:textColor="@color/prodetail_prod_tiny"
+                android:textSize="18sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/tv_payment_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="￥398.00"
+                android:visibility="gone"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_payment_way"
+            android:layout_width="match_parent"
+            android:layout_below="@id/ll_tips"
+            android:layout_marginTop="20dp"
+            android:layout_height="45dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="现在您可以:"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"
+                android:id="@+id/tv_way" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_way"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:id="@+id/rl_wx"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:layout_below="@id/view_way"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="返回商城"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/white"
+                            android:padding="6dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/login_login_click"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_score" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:layout_below="@id/view_zfb"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="查看订单"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/white"
+                            android:padding="6dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/login_login_click"
+                            android:textSize="18sp"
+                            android:id="@+id/tv_zfb" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

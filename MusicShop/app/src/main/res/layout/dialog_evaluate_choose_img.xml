@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/photo_full"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:layout_margin="20dp"
+        android:background="@drawable/corner_blue"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:background="@color/white"
+                android:text="本地选择" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_code_error"></View>
+            <Button
+                android:id="@+id/neutralButton"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_weight="0.1"
+                android:textStyle="normal"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:text="拍照上传" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#F5F5F5"></View>
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_weight="0.1"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:background="@color/white"
+                android:text="取消" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/prodetail_keep_unclick" android:state_checked="false"></item>
+    <item android:drawable="@mipmap/prodetail_keep_click" android:state_checked="true"></item>
+
+</selector>

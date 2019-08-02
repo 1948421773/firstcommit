@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_search_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.5sp"
+        android:background="@drawable/homesecond_listitem_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl_homesecond_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1sp"
+            android:gravity="center">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/homeitem_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="2sp"
+                fresco:placeholderImage="@mipmap/img_start_loading"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:failureImage="@mipmap/img_load_error"
+                fresco:failureImageScaleType="centerInside"
+            android:scaleType="center" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_home_grid_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/rl_homesecond_item"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingLeft="6dp"
+            android:paddingTop="2dp"
+            android:text="@string/home_grid_item_title"
+            android:textColor="@color/home_grid_item_title_color"
+            android:textSize="@dimen/home_grid_item_title_size" />
+
+
+        <TextView
+            android:id="@+id/tv_home_grid_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_home_grid_item_title"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_grid_item_price"
+            android:textColor="@color/home_grid_item_price_tc"
+            android:textSize="@dimen/home_grid_item_price_size" />
+
+        <TextView
+            android:id="@+id/tv_price_decimal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_home_grid_item_title"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/tv_home_grid_item_price"
+            android:gravity="bottom"
+            android:text=".00"
+            android:textColor="@color/home_grid_item_price_tc"
+            android:textSize="@dimen/order_unpaid_shopname" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_home_grid_item_title"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="4dp"
+            android:background="@mipmap/home_grid_item_cart" />
+    </RelativeLayout>
+</RelativeLayout>

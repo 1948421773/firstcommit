@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="home_grid_item_title_size">16dp</dimen>
+    <dimen name="home_grid_item_price_size">16dp</dimen>
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="order_unpaid_shopname">13dp</dimen>
+    <dimen name="order_unpaid_state">12dp</dimen>
+    <dimen name="order_unpaid_prod_num">11dp</dimen>
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="edittext_clear_bg">18dp</dimen>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/home_grid_item_frame"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/shoppingcart_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white" >
+        <ImageView
+            android:id="@+id/iv_develop_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_develop_icon"
+            android:background="@android:color/white"
+            android:text="第八号当铺"
+            android:textColor="@color/main_tab_text_click"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="6dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:drawableLeft="@mipmap/orderdetail_customer_service"
+            android:layout_marginLeft="20dp"
+            android:text="联系客服"
+            android:textColor="@color/main_tab_text_click"
+            android:textSize="14dp" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_spce_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/material_label"
+        />
+
+</LinearLayout>

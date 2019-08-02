@@ -1,0 +1,132 @@
+<?xml  version="1.0"  encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:alpha="0.4"
+                android:background="#dddddd"  />
+
+        <LinearLayout
+                android:id="@+id/ll_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                >
+                <RadioGroup
+                        android:id="@+id/rg_prodetail_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_all"
+                                android:checked="true"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:button="@null"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"
+                                android:text="全部"  />
+
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_additional"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="追加"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"  />
+
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_praise"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:button="@null"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"
+                                android:text="好评"  />
+
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_general"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"
+                                android:text="中评"  />
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_bad"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"
+                                android:text="差评"  />
+                        <RadioButton
+                                android:id="@+id/rb_prodetail_comment_hasimg"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:textColor="@drawable/radiobutton_check_change_textcolor"
+                                android:text="带图"  />
+                </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:alpha="0.4"
+                android:background="#dddddd"  />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_product_RecyclerView_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:choiceMode="singleChoice"
+                android:dividerHeight="2px"
+                android:listSelector="#00000000"
+                android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+                android:id="@+id/ll_empty_comment"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暂无评论"
+                        android:textColor="#888888"
+                        android:textSize="13dp"  />
+        </LinearLayout>
+</LinearLayout>

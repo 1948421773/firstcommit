@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/topbar_white"
+        layout="@layout/topbar_red"
+        />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_below="@id/topbar_white"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/view_line"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:id="@+id/ll_pointsmall_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/signday_bg"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_signin"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:textSize="26dp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/signin"
+                        />
+                    <TextView
+                        android:id="@+id/tv_points_text"
+                        android:layout_below="@id/tv_signin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:text="签到可获得5个积分"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.musicdo.musicshop.view.CommonCalendarView
+                android:id="@+id/mycalendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </com.musicdo.musicshop.view.CommonCalendarView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/ll_signin_bg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/signin_addpoints1"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="26dp"
+            android:textColor="@color/payment_price"
+            android:id="@+id/tv_signin_bg"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+    defaultConfig {
+        ndk {
+            // 设置支持的 SO 库构架，一般而言，取你所有的库支持的构架的`交集`。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        applicationId "com.musicdo.musicshop"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 61
+        versionName "1.1.31"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    //应用 Bugtags 插件
+    apply plugin: 'com.bugtags.library.plugin'
+
+    //Bugtags 插件配置
+    bugtags {
+        //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+        appKey "03b380ebb56c0b1f11009771c3c0798c"  //这里是你的 appKey
+        appSecret "APP_SECRET"    //这里是你的 appSecret，
+        mappingUploadEnabled true//管理员在设置页可以查看
+        //网络跟踪功能配置(企业版)
+        trackingNetworkEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    def fileName
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+
+                        // apk_渠道名-版本号-版本名称-编译时间.apk
+                        fileName = "apk_${'musicshop'}-${defaultConfig.versionName}-${releaseTime()}-${defaultConfig.versionCode}.apk"
+                        outputFileName = fileName
+                    }
+                }
+            }
+        }
+    }
+    productFlavors {
+    }
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.bugtags.library:bugtags-lib:latest.integration'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:design:+'
+    testImplementation 'junit:junit:4.12'
+//    implementation files('libs/core-3.2.1.jar')
+    implementation files('libs/mta-sdk-1.6.2.jar')
+    implementation project(':libzxing')
+    implementation 'com.facebook.fresco:fresco:1.3.0'
+    implementation project(':loopswitch')
+    implementation 'com.lzy.net:okhttputils:1.8.1'
+    //可以单独使用，不需要依赖下方的扩展包
+    implementation 'com.lzy.net:okhttpserver:1.0.3'
+    //扩展了下载管理和上传管理，根据需要添加
+    implementation 'com.lzy.net:okhttputils:+'
+    //版本号使用 + 可以自动引用最新版
+//    compile 'com.lzy.net:okhttpserverappli:+'
+    //版本号使用 + 可以自动引用最新版
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.gxz.pagerslidingtabstrip:library:1.3'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.tonicartos:stickygridheaders:1.0.1'
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.jj3341332:RoundImageView:1.0'
+//    implementation files('libs/libammsdk.jar')
+    android { useLibrary 'org.apache.http.legacy' }
+    implementation files('libs/alipaySdk-20170725.jar')
+    implementation 'org.textmining:tm-extractors:0.4'
+    implementation files('libs/mta-sdk-1.6.2.jar')
+    implementation files('libs/open_sdk_r5788.jar')
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation project(':ptr-lib')
+    implementation 'com.google.android.gms:play-services-appindexing:8.4.0'
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+    implementation files('libs/umeng_social_api.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/umeng_social_tool.jar')
+    implementation files('libs/SocialSDK_QQ_Simplify.jar')
+    implementation files('libs/SocialSDK_Sina_Simplify.jar')
+    implementation files('libs/umeng_social_shareboard.jar')
+    implementation files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    implementation files('libs/umeng_shareboard_widget.jar')
+    implementation files('libs/SocialSDK_sms.jar')
+    implementation files('libs/umeng_social_shareview.jar')
+    implementation files('libs/SocialSDK_WeiXin_Full.jar')
+    implementation files('libs/UPPayPluginExPro.jar')
+    implementation files('libs/UPPayAssistEx.jar')
+    implementation files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
+    implementation 'com.danikula:videocache:2.7.0'
+    implementation 'com.v5kf.clientsdk:clientsdk:1.3.11'
+//    implementation files('libs/V5KF_1.3.11_r181018.jar')
+}
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.getkeepsafe.dexcount'//在项目build.gardle中配置代码

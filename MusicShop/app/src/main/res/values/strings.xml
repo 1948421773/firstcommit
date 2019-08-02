@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">乐都城</string>
+    <string name="home_popularity_title">人气产品</string>
+    <string name="home_list_title">必买清单</string>
+    <string name="home_popularity_text">趋势潮流新品</string>
+    <string name="home_list_text">用心选良品</string>
+    <string name="home_goodthing_title">购·好物</string>
+    <string name="home_goodthing_text">精选优质产品</string>
+    <string name="home_more">更多</string>
+    <string name="home_brandmuseum">品牌馆</string>
+    <string name="home_musicalinstrument">音乐馆</string>
+    <string name="home_musical_instrument">乐器馆</string>
+    <string name="home_grid_item_price">￥25000.00</string>
+    <string name="home_grid_item_title">雅马哈智能钢琴NP12成人儿童电钢琴61/76键力度</string>
+    <string name="productdetail_share_text">分享有赏</string>
+    <string name="productdetail_addcart_text">加入购物车</string>
+    <string name="productdetail_buynow_text">立即购买</string>
+    <string name="main_home">主页</string>
+    <string name="main_category">分类</string>
+    <string name="main_group">圈子</string>
+    <string name="group_title">互动圈</string>
+    <string name="main_shopingcart">购物车</string>
+    <string name="main_personalcenter">个人中心</string>
+    <string name="group_radiobutton_develop">关注动态</string>
+    <string name="group_radiobutton_community">互动社区</string>
+    <string name="productdetail_customer_service">客服</string>
+    <string name="productdetail_shop">店铺</string>
+    <string name="productdetail_keep">收藏</string>
+    <string name="productdetail_all_prod">全部宝贝</string>
+    <string name="productdetail_new_prod">上新宝贝</string>
+    <string name="productdetail_focus_num">关注人数</string>
+    <string name="productdetail_proud_describe">宝贝描述</string>
+    <string name="productdetail_seller_services">卖家服务</string>
+    <string name="productdetail_logistic">物流服务</string>
+    <string name="personal_tools">必备工具</string>
+    <string name="personal_alltools">全部工具</string>
+    <string name="personal_recommend">为你推荐</string>
+    <string name="personal_unpaid">待付款</string>
+    <string name="personal_nodelivery">待发货</string>
+    <string name="personal_noreceipt">待收货</string>
+    <string name="personal_noevaluation">待评价</string>
+    <string name="personal_returned">退换货</string>
+    <string name="shoppingcart_title">购物车</string>
+    <string name="shoppingcart_choose_all">全选</string>
+    <string name="shoppingcart_complete_edit">完成</string>
+    <string name="shoppingcart_all_edit">编辑全部</string>
+    <string name="shoppingcart_edit">编辑</string>
+    <string name="shoppingcart_delete">删除</string>
+    <string name="shoppingcart_keep_in">移入收藏夹</string>
+    <string name="shoppingcart_calculate">结算</string>
+    <string name="rmb">¥</string>
+    <string name="order_unpaid_replace">朋友代付</string>
+    <string name="order_unpaid_cancel">取消订单</string>
+    <string name="order_unpaid_topay">立即付款</string>
+    <string name="login_username_tips">手机/用户名/邮箱</string>
+    <string name="login_password_tips">请输入密码</string>
+    <string name="login_new_password">请输入新密码</string>
+    <string name="login_confirm_password">重复输入新密码</string>
+    <string name="login_phone_tips">请输入手机号码</string>
+    <string name="login_verificationCode">请输入验证码</string>
+    <string name="register_show_password">显示密码</string>
+    <string name="register_get_verificationCode">获取验证码</string>
+    <string name="register_get_verificationCode_again">重新获取验证码</string>
+    <string name="register_Agreement">《乐都城网络服务协议》</string>
+    <string name="search_edit_tips">搜索你想要的宝贝</string>
+    <string name="searchprod_price">价格</string>
+    <string name="searchprod_overall">综合</string>
+    <string name="searchprod_sales">销量</string>
+    <string name="searchprod_screen">筛选</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pricesymbol">¥</string>
+
+    <string name="listview_header_hint_normal">下拉刷新</string>
+    <string name="listview_header_hint_release">释放立即刷新</string>
+    <string name="listview_loading">正在加载...</string>
+    <string name="nomore_loading">没有更多数据了</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_done">刷新完成</string>
+    <string name="listview_header_last_time">上次更新时间：</string>
+    <string name="time_ganggang">刚刚</string>
+    <string name="time_nianqian">年前</string>
+    <string name="time_yueqian">月前</string>
+    <string name="time_tianqian">天前</string>
+    <string name="time_xiaoshiqian">小时前</string>
+    <string name="time_fenzhongqian">分钟前</string>
+    <string name="time_miaoqian">秒前</string>
+
+    <string-array name="Permission">
+        <item>Manifest.permission.CAMERA</item>
+        <item>Manifest.permission.READ_EXTERNAL_STORAGE</item>
+        <item>Manifest.permission.WRITE_EXTERNAL_STORAGE</item>
+        <item>Manifest.permission.ACCESS_COARSE_LOCATION</item>
+        <item>Manifest.permission.ACCESS_FINE_LOCATION</item>
+    </string-array>
+
+    <string name="umeng_socialize_text_sina_key">微博</string>
+    <string name="umeng_socialize_text_qq_key">QQ</string>
+    <string name="umeng_socialize_text_qq_zone_key">QQ空间</string>
+    <string name="umeng_socialize_text_weixin_key">微信</string>
+    <string name="umeng_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="umeng_socialize_sms">短信</string>
+    <string name="umeng_socialize_sina">新浪</string>
+</resources>
