@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <stroke
+                android:width="4px"
+                android:color="@color/white"
+                /><!--只留底部4px可被填充颜色-->
+            <padding android:bottom="4px"/>
+        </shape>
+    </item>
+    <item
+        >
+        <shape><!--其他部分填充颜色-->
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+
+</layer-list>

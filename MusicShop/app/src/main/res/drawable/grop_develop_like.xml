@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/gruop_develop_like_unclick"
+        android:state_checked="false" />
+    <item android:drawable="@mipmap/gruop_develop_like_click"
+        android:state_checked="true" />
+</selector>

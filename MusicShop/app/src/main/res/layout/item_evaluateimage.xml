@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/im_evaluate"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:visibility="visible"
+            />
+        <ImageView
+            android:id="@+id/im_evaluate_delete"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/order_evaluate_deleteimg"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/shoppingcart_list_item_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/home_top_reflash_bg"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_top"
+        android:id="@+id/rl_middle">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_trackinglogistics_left"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="60px"
+            >
+            <View
+                android:id="@+id/line_up"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/order_tracking_logistics_line" />
+            <ImageView
+                android:id="@+id/point"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@mipmap/tracking_logistics_item2"
+                />
+
+            <View
+                android:id="@+id/line_down"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:background="@color/order_tracking_logistics_line" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_trackinglogistics_left"
+            >
+            <TextView
+                android:id="@+id/tv_info_message"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:lines="2"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:textColor="@color/order_tracking_logistics"
+                android:padding="3dp"
+                android:text="广州市白云区"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_info_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textSize="16dp"
+                android:textColor="@color/order_tracking_logistics"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="6dp"
+                android:text="2017-08-31"
+                android:layout_below="@id/tv_info_message"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/rl_middle"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/home_top_reflash_bg"/>
+
+</RelativeLayout>

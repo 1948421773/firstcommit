@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/register_code_error"
+    >
+    <include
+        android:id="@+id/topbar_white_threebutton"
+        layout="@layout/topbar_white_threebutton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+    <RadioGroup
+        android:id="@+id/rg_searchtab"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@id/topbar_white_threebutton"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_all_order"
+            android:checked="true"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:ellipsize="end"
+            android:button="@null"
+            android:background="@drawable/order_list_tab_botton"
+            android:textColor="@drawable/radiobutton_check_change_textcolor"
+            android:text="全部订单" />
+
+        <RadioButton
+            android:id="@+id/rb_unpay"
+            android:layout_weight="1"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/order_list_tab_botton"
+            android:textColor="@drawable/radiobutton_check_change_textcolor"
+            android:text="待付款" />
+
+        <RadioButton
+            android:id="@+id/rb_shipment_pending"
+            android:layout_weight="1"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/order_list_tab_botton"
+            android:textColor="@drawable/radiobutton_check_change_textcolor"
+            android:text="待发货" />
+
+        <RadioButton
+            android:id="@+id/rb_unreceived"
+            android:layout_weight="1"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/order_list_tab_botton"
+            android:textColor="@drawable/radiobutton_check_change_textcolor"
+            android:text="待收货" />
+        <RadioButton
+            android:id="@+id/rb_pending_evaluation"
+            android:layout_weight="1"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/order_list_tab_botton"
+            android:textColor="@drawable/radiobutton_check_change_textcolor"
+            android:text="待评价" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_below="@id/rg_searchtab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+        <com.musicdo.musicshop.view.SExpandableListView
+            android:listSelector="@android:color/transparent"
+            android:id="@+id/el_allorder"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp">
+
+        </com.musicdo.musicshop.view.SExpandableListView>
+    </LinearLayout>
+
+</RelativeLayout>

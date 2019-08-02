@@ -1,0 +1,1 @@
+include ':libzxing', ':loopswitch', ':ptr-lib',':app'

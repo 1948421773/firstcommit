@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@id/topbar_white"
+            layout="@layout/topbar_white"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/username_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:hint="@string/login_username_tips"
+                            android:singleLine="true"
+                            android:maxLength="20"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="60dp"></EditText>
+
+                        <Button
+                            android:id="@+id/bt_username_clear"
+                            android:layout_width="@dimen/edittext_clear_bg"
+                            android:layout_height="@dimen/edittext_clear_bg"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@mipmap/login_cancel"
+                            android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <View
+                        android:id="@+id/v_login_user_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/username_layout"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/shoppingcart_unaccount" />
+
+                    <FrameLayout
+                        android:id="@+id/usercode_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/v_login_user_line"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:hint="@string/login_password_tips"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:maxLength="20"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="60dp"></EditText>
+
+                        <CheckBox
+                            android:id="@+id/ck_pwd_eye"
+                            android:layout_width="@dimen/edittext_clear_bg"
+                            android:layout_height="@dimen/edittext_clear_bg"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/login_look_password"
+                            android:button="@null" />
+
+                        <Button
+                            android:id="@+id/bt_password_clear"
+                            android:layout_width="@dimen/edittext_clear_bg"
+                            android:layout_height="@dimen/edittext_clear_bg"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="56dp"
+                            android:background="@mipmap/login_cancel"
+                            android:visibility="invisible" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/usercode_layout"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/shoppingcart_unaccount" />
+
+                    <TextView
+                        android:id="@+id/login_forgot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/usercode_layout"
+                        android:layout_below="@id/usercode_layout"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="忘记密码?"
+                        android:textColor="@color/prodetail_freight"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/login_forgot"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/login_login_unclick"
+                        android:gravity="center"
+                        android:text="登录"
+                        android:textColor="@android:color/white"
+                        android:textSize="22dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/photo_full"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:layout_weight="0.6" />
+
+        <EditText
+            android:id="@+id/img_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="3" >
+        </EditText>
+
+        <Button
+            android:id="@+id/natives"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="本地选择" />
+
+        <Button
+            android:id="@+id/pai"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="拍照上传" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="确定" />
+
+    </LinearLayout>
+</LinearLayout>
